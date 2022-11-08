@@ -1,0 +1,283 @@
+//需要用到自定义字体可在iconfont.cn立项添加
+// @import "./iconfont/iconfont.css";
+:global {
+  @function vw($px) {
+    @return floor(($px / 75) * 1rem * 1000) / 1000;
+  }
+}
+html,
+body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+
+.GlobalPageMain {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+[data-dpr="2"] .GlobalPageMain {
+  max-width: 1500px;
+}
+
+[data-dpr="3"] .GlobalPageMain {
+  max-width: 2250px;
+}
+
+vb-dragger-styler html {
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu,
+img,
+iframe {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  border: 0;
+  outline: 0;
+}
+
+header,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+details {
+  display: block;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // font-size: 12px;
+  // text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+}
+
+.GlobalPageMain {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+body.dialog {
+  position: fixed;
+  width: 100%;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  // background-color: red
+}
+
+.downloadPopup {
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 1.1em;
+  background-color: #333333;
+  overflow: hidden;
+  font-size: 13.333333vw;
+  -webkit-user-select: none;
+  /* IOS 长按放大镜效果关闭 */
+}
+
+.downloadPopup.top {
+  top: 0;
+}
+
+.downloadPopup a {
+  color: #333;
+  text-decoration: none;
+}
+
+.downloadPopup .closeBtn {
+  box-sizing: border-box;
+  position: relative;
+  width: 0;
+  height: 0;
+  border: 0.2em solid #5c5c5c;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.downloadPopup .closeBtn::after {
+  position: absolute;
+  top: -0.96em;
+  left: -0.6em;
+  display: inline-block;
+  content: "+";
+  color: #ababab;
+  font-size: 0.26em;
+  font-weight: bold;
+  transform: rotate(45deg);
+}
+
+.downloadPopup .closeBtn:active {
+  border-left-color: #4b4a4a;
+  border-top-color: #4b4a4a;
+}
+
+.downloadPopup .logo {
+  width: 0.72em;
+  height: 0.72em;
+  position: absolute;
+  top: 50%;
+  left: 0.3em;
+  transform: translateY(-50%);
+}
+
+.downloadPopup .text {
+  position: absolute;
+  top: 50%;
+  left: 1.2em;
+  transform: translateY(-50%);
+  color: #f5f5f5;
+}
+
+.downloadPopup .text p {
+  padding: 0;
+  margin: 0;
+}
+
+.downloadPopup .text p:first-child {
+  font-size: 0.28em;
+  font-weight: 500;
+  margin-bottom: 0.016em;
+}
+
+.downloadPopup .text p:last-child {
+  font-size: 0.22em;
+  font-weight: normal;
+}
+
+.downloadPopup .downloadBtn {
+  position: absolute;
+  top: 50%;
+  right: 0.2em;
+  transform: translateY(-50%);
+  width: 1.46em;
+  height: 0.54em;
+  border-radius: 0.06em;
+  background-image: linear-gradient(270deg, #ff5c4b 0%, #fe6f3d 100%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadPopup .downloadBtn span,
+.downloadPopup .downloadBtn a {
+  font-size: 0.24em;
+  color: #f5f5f5;
+}
+
+.downloadPopup .downloadBtn:active {
+  box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+.UIItem {
+  .UIBody {
+    position: relative;
+  }
+}
+
+.overflowscrollingtouch {
+  -webkit-overflow-scrolling: touch;
+}

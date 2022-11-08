@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>性能测试</title>
+  </head>
+
+  <body style="font-size: 12px">
+    <div id="root"></div>
+    <script src="../dist/js/bundle.js"></script>
+  </body>
+  <script>
+    document.documentElement.style.fontSize =
+      document.documentElement.clientWidth / 10 > 75
+        ? 75 + "px"
+        : document.documentElement.clientWidth / 10 + "px";
+  </script>
+</html>
